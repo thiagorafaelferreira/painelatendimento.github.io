@@ -33,8 +33,13 @@
             }
             .item2 {
                 grid-template-rows: 30vh 10vh 20vh 20vh 20vh; 
-                text-align: center;
                 color: white;
+            }
+            .item2 div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
             }
             .chamada1 {
                 background: #333333;
@@ -50,6 +55,9 @@
             }
             .chamada4 {
                 background: #999999;
+            }
+            .acompanhamento {
+                overflow: hidden;
             }
             .acompanhamento div {
                 height: 7vh;
@@ -81,6 +89,25 @@
                 background: black;
             }
         </style>
+        <script>
+            var pos = 0;
+            var time = 50;
+            console.log('start');
+            window.setInterval(function() {
+                var elem = document.getElementById('acompanhamento');
+                if(pos === 100) {
+                    pos = 0;
+                    const top = elem.scrollTop;
+                    elem.scrollTop += 1;
+                    if (elem.scrollTop === top) {
+                        elem.scrollTop = 0;
+                    }
+                } else {
+                    pos++;
+                    elem.scrollTop += 1;
+                }
+            }, time);
+        </script>
     </head>
     <body>
         <div class='grid-container'>
@@ -95,10 +122,36 @@
                          <source src="video/movie.ogg" type="video/ogg">
                     </video> -->
                 </div>
-                <div class='acompanhamento'>
+                <div id='acompanhamento' class='acompanhamento'>
                     <div class='red'><span>Rafael</span><span>Aguardando Triagem</span></div>
                     <div class='blue'><span>Felipe</span><span>Aguardando Consulta</span></div>
                     <div class='green'><span>Thiago</span><span>Aguardando Consulta</span></div>
+                    <div class='yellow'><span>Brenda</span><span>Em observação</span></div>
+                    <div class='yellow'><span>Brenda</span><span>Em observação</span></div>
+                    <div class='red'><span>Rafael</span><span>Aguardando Triagem</span></div>
+                    <div class='blue'><span>Felipe</span><span>Aguardando Consulta</span></div>
+                    <div class='green'><span>Thiago</span><span>Aguardando Consulta</span></div>
+                    <div class='yellow'><span>Brenda</span><span>Em observação</span></div>
+                    <div class='yellow'><span>Brenda</span><span>Em observação</span></div>
+                    <div class='red'><span>Rafael</span><span>Aguardando Triagem</span></div>
+                    <div class='blue'><span>Felipe</span><span>Aguardando Consulta</span></div>
+                    <div class='green'><span>Thiago</span><span>Aguardando Consulta</span></div>
+                    <div class='yellow'><span>Brenda</span><span>Em observação</span></div>
+                    <div class='yellow'><span>Brenda</span><span>Em observação</span></div>
+                    <div class='red'><span>Rafael</span><span>Aguardando Triagem</span></div>
+                    <div class='blue'><span>Felipe</span><span>Aguardando Consulta</span></div>
+                    <div class='green'><span>Thiago</span><span>Aguardando Consulta</span></div>
+                    <div class='yellow'><span>Brenda</span><span>Em observação</span></div>
+                    <div class='yellow'><span>Brenda</span><span>Em observação</span></div>
+                    <div class='red'><span>Rafael</span><span>Aguardando Triagem</span></div>
+                    <div class='blue'><span>Felipe</span><span>Aguardando Consulta</span></div>
+                    <div class='green'><span>Thiago</span><span>Aguardando Consulta</span></div>
+                    <div class='yellow'><span>Brenda</span><span>Em observação</span></div>
+                    <div class='yellow'><span>Brenda</span><span>Em observação</span></div>
+                    <div class='red'><span>Rafael</span><span>Aguardando Triagem</span></div>
+                    <div class='blue'><span>Felipe</span><span>Aguardando Consulta</span></div>
+                    <div class='green'><span>Thiago</span><span>Aguardando Consulta</span></div>
+                    <div class='yellow'><span>Brenda</span><span>Em observação</span></div>
                     <div class='yellow'><span>Brenda</span><span>Em observação</span></div>
                 </div>
             </div>
